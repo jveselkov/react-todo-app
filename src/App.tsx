@@ -1,16 +1,14 @@
-import { Space } from "antd";
+import { Row, Col } from "antd";
+
+import { Todos } from "./widgets";
 
 function App() {
   return (
-    <>
-      <Space align="center">
-        <div style={{ minHeight: "20rem" }}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-          repellendus ad voluptatum quidem dolore blanditiis praesentium id
-          eaque? Excepturi, fugit!
-        </div>
-      </Space>
-    </>
+    <Row gutter={[16, 16]}>
+      <Col xs={{ span: 24 }} lg={{ span: 12, offset: 6 }}>
+        <Todos />
+      </Col>
+    </Row>
   );
 }
 
