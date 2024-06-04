@@ -13,6 +13,7 @@ export const CheckIcon = ({
   ...props
 }: ICheckIcon) => (
   <Flex
+    data-cy="check-container"
     {...props}
     align="center"
     justify="center"
@@ -26,7 +27,6 @@ export const CheckIcon = ({
       height: "1.5em",
       width: "1.5em",
     }}
-    data-cy="check-container"
   >
     {check ? <CheckOutlined data-cy="check-icon" /> : " "}
   </Flex>

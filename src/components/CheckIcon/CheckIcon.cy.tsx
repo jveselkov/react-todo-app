@@ -7,6 +7,7 @@ describe("CheckIcon tests", () => {
       .get("span[data-cy=check-icon]")
       .get("svg");
   });
+
   it("should mount unchecked", () => {
     cy.mount(<CheckIcon check={false} />);
     cy.get("div[data-cy=check-container]")
