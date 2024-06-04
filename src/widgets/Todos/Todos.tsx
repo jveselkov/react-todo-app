@@ -3,7 +3,7 @@ import { Space, Card, Typography, Button, Segmented } from "antd";
 import { useStoredTodos, useFilteredTodos, FilterValues } from "@/hooks";
 import { InputConfirm } from "@/components";
 
-import { TodoItem } from "./TodoItem";
+import { TodoItem } from "@/widgets";
 
 const { Text } = Typography;
 
@@ -41,9 +41,13 @@ export const Todos = () => {
     <Card
       title="todos"
       actions={[
-        <Text>{undoneTodosCount} items left</Text>,
+        <Text data-cy="todos-counter">{undoneTodosCount} items left</Text>,
         <Segmented options={FilterValues} onChange={setFilters} />,
-        <Button type="text" onClick={removeDoneTodos}>
+        <Button
+          type="text"
+          onClick={removeDoneTodos}
+          data-cy="remove-completed"
+        >
           clear completed
         </Button>,
       ]}

@@ -17,14 +17,16 @@ export interface ITodoItemProps {
 }
 
 export const TodoItem = ({ item, onClick, onEdit }: ITodoItemProps) => (
-  <Flex gap="middle" align="center">
+  <Flex gap="middle" align="center" data-cy="todo-item">
     <CheckIcon
+      data-cy="todo-check-icon"
       check={item.done}
       onClick={onClick}
       style={{ cursor: "pointer" }}
     />
 
     <Text
+      data-cy="todo-content"
       editable={{
         icon: <EditFilled />,
         tooltip: "click to edit text",
