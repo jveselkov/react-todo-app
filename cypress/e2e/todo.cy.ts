@@ -17,8 +17,6 @@ const testTodosContent = (titles: string[]) => {
         cy.contains("span[data-cy=todo-content]", titles[index]);
       });
     });
-
-  cy.get("span[data-cy=todos-counter]").contains(titles.length.toString());
 };
 
 describe("add todo test and reload page", () => {
@@ -31,6 +29,8 @@ describe("add todo test and reload page", () => {
   it("should add todos and reload page", () => {
     addTodos(titles);
     testTodosContent(titles);
+
+    cy.get("span[data-cy=todos-counter]").contains(titles.length.toString());
 
     cy.reload();
 
@@ -54,15 +54,17 @@ describe("add todo test and reload page", () => {
     cy.get("div[data-cy=todo-check-icon]").first().click();
     cy.get("div[data-cy=todo-check-icon]").last().click();
 
-    cy.get("button").contains(Filters.Active).click();
+    cy.get("div").contains(Filters.Active).click();
     const active = [titles[1], titles[2]];
     testTodosContent(active);
 
-    cy.get("button").contains(Filters.Completed).click();
+    cy.get("div").contains(Filters.Completed).click();
     const completed = [titles[0], titles[3]];
     testTodosContent(completed);
 
-    cy.get("button").contains(Filters.All).click();
+    cy.get("div").contains(Filters.All).click();
     testTodosContent(titles);
+
+    cy.get("span[data-cy=todos-counter]").contains(active.length.toString());
   });
 });

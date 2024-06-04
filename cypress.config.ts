@@ -1,4 +1,5 @@
 import { defineConfig } from "cypress";
+import vitePreprocessor from "cypress-vite";
 
 export default defineConfig({
   e2e: {
@@ -6,7 +7,9 @@ export default defineConfig({
     video: false,
     specPattern: "cypress/e2e/**/*.cy.ts",
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    setupNodeEvents(on, config) {},
+    setupNodeEvents(on, config) {
+      on("file:preprocessor", vitePreprocessor());
+    },
   },
   component: {
     video: false,
