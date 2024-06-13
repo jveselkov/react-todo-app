@@ -1,15 +1,7 @@
-import { Row, Col } from "antd";
-
-import { Todos } from "../widgets";
+import { TodoPage } from "@/pages";
 
 function App() {
-  return (
-    <Row gutter={[16, 16]}>
-      <Col xs={{ span: 24 }} lg={{ span: 12, offset: 6 }}>
-        <Todos />
-      </Col>
-    </Row>
-  );
+  return <TodoPage />;
 }
 
 export default App;
