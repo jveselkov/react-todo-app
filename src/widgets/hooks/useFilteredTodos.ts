@@ -1,4 +1,4 @@
-import { ITodoItem } from "@/types";
+import { ITodoItem } from "@/entities";
 
 import { useMemo, useState } from "react";
 

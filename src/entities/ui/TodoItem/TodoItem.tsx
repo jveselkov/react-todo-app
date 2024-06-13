@@ -4,9 +4,13 @@ import { Flex, Typography } from "antd";
 import { EditFilled } from "@ant-design/icons";
 import { gray } from "@ant-design/colors";
 
-import { CheckIcon } from "@/components";
+import { CheckIcon } from "@/shared";
 
-import { ITodoItem } from "@/types";
+export interface ITodoItem {
+  id: string;
+  title: string;
+  done: boolean;
+}
 
 const { Text } = Typography;
 

@@ -1,4 +1,4 @@
-import { Filters } from "@/hooks";
+import { Filters } from "@/widgets/hooks";
 
 const titles: string[] = ["title 1", "title 2", "title 3", "title 4"];
 

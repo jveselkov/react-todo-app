@@ -1,9 +1,13 @@
 import { Space, Card, Typography, Button, Segmented } from "antd";
 
-import { useStoredTodos, useFilteredTodos, FilterValues } from "@/hooks";
-import { InputConfirm } from "@/components";
+import {
+  useStoredTodos,
+  useFilteredTodos,
+  FilterValues,
+} from "@/widgets/hooks";
+import { InputConfirm } from "@/shared";
 
-import { TodoItem } from "@/widgets";
+import { TodoItem } from "@/entities";
 
 const { Text } = Typography;
 

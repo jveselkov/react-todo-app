@@ -1,6 +1,6 @@
 import { Row, Col } from "antd";
 
-import { Todos } from "./widgets";
+import { Todos } from "../widgets";
 
 function App() {
   return (

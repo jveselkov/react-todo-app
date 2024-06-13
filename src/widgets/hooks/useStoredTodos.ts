@@ -1,7 +1,7 @@
-import { ITodoItem } from "@/types";
+import { ITodoItem } from "@/entities";
 import { useTodos } from "./useTodos";
 
-import { saveDataToStorage, getDataFromStorage } from "@/utils";
+import { saveDataToStorage, getDataFromStorage } from "@/shared";
 import { useEffect } from "react";
 
 export const useStoredTodos = () => {

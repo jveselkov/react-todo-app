@@ -6,14 +6,13 @@ export default defineConfig({
     baseUrl: "http://localhost:5173",
     video: false,
     specPattern: "cypress/e2e/**/*.cy.ts",
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    setupNodeEvents(on, config) {
+    setupNodeEvents(on) {
       on("file:preprocessor", vitePreprocessor());
     },
   },
   component: {
     video: false,
-    specPattern: "src/**/*.cy.tsx",
+    specPattern: "src/**/*.spec.tsx",
     devServer: {
       framework: "react",
       bundler: "vite",
