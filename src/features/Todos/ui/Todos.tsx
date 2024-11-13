@@ -4,10 +4,11 @@ import {
   useStoredTodos,
   useFilteredTodos,
   FilterValues,
-} from "@/widgets/hooks";
+} from "@/features/Todos";
+
 import { InputConfirm } from "@/shared";
 
-import { TodoItem } from "@/entities";
+import { TodoItem } from "@/entities/TodoItem";
 
 const { Text } = Typography;
 

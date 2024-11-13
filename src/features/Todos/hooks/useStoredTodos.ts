@@ -1,4 +1,4 @@
-import { ITodoItem } from "@/entities";
+import { ITodoItem } from "@/entities/TodoItem";
 import { useTodos } from "./useTodos";
 
 import { saveDataToStorage, getDataFromStorage } from "@/shared";

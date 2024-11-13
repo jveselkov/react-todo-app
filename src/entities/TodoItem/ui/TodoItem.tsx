@@ -6,11 +6,7 @@ import { gray } from "@ant-design/colors";
 
 import { CheckIcon } from "@/shared";
 
-export interface ITodoItem {
-  id: string;
-  title: string;
-  done: boolean;
-}
+import { ITodoItem } from "../model";
 
 const { Text } = Typography;
 

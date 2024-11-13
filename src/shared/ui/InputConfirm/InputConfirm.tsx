@@ -1,6 +1,6 @@
 import { Flex, Button, Input, Form, FormProps } from "antd";
 
-import { PlusOutlined, DownOutlined } from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
 
 const { useForm } = Form;
 
@@ -27,7 +27,7 @@ export const InputConfirm = ({ onConfirm }: IInputConfirm) => {
           name="content"
           rules={[{ required: true, message: "required" }]}
         >
-          <Input prefix={<DownOutlined />} />
+          <Input />
         </Form.Item>
 
         <Form.Item>

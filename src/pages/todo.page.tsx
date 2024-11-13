@@ -1,6 +1,6 @@
 import { Row, Col } from "antd";
 
-import { Todos } from "@/widgets";
+import { Todos } from "@/features/Todos";
 
 export const TodoPage = () => (
   <Row gutter={[16, 16]}>

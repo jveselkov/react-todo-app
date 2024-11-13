@@ -1,4 +1,4 @@
-import { ITodoItem } from "@/entities";
+import { ITodoItem } from "@/entities/TodoItem";
 
 import { useMemo, useState } from "react";
 
@@ -15,6 +15,7 @@ export const useTodos = (initialTodos: ITodoItem[]) => {
       },
     ]);
   };
+
   const updateTodo = (todo: ITodoItem) => {
     setTodos((todos) =>
       todos.map((item) => (item.id !== todo.id ? item : todo))
